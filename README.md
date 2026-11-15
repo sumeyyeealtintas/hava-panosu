@@ -1,5 +1,7 @@
 # 🌦️ Hava Panosu
 
+[![Testler](https://github.com/sumeyyeealtintas/hava-panosu/actions/workflows/test.yml/badge.svg)](https://github.com/sumeyyeealtintas/hava-panosu/actions/workflows/test.yml)
+
 Şehir arayıp **anlık hava durumunu ve 7 günlük tahmini** gösteren, telefona **uygulama gibi kurulabilen (PWA)** mobil uyumlu bir web uygulaması. Framework ve derleme adımı yok: saf HTML, CSS ve JavaScript (ES modülleri).
 
 ## 🧰 Teknolojiler
