@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hava Panosu</title>
+  <meta name="description" content="Şehrinizin anlık hava durumu ve 7 günlük tahmini. Telefona kurulabilir, çevrimdışı çalışır.">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+
+  <header class="ust">
+    <h1>Hava Panosu</h1>
+    <form id="arama-formu" class="arama" role="search">
+      <label for="sehir" class="gizli">Şehir ara</label>
+      <input id="sehir" name="sehir" type="search" placeholder="Şehir ara (ör. Konya)" autocomplete="off" required minlength="2">
+      <button type="submit">Ara</button>
+      <button type="button" id="konum-dugmesi" class="ikincil" aria-label="Konumumu kullan" title="Konumumu kullan">📍</button>
+    </form>
+    <ul id="oneriler" class="oneriler" hidden></ul>
+  </header>
+
+  <main id="icerik">
+    <p id="durum" class="durum" role="status" aria-live="polite"></p>
+
+    <section id="simdi" class="kart simdi" aria-labelledby="yer-adi" hidden>
+      <h2 id="yer-adi"></h2>
+      <div class="simdi-ana">
+        <span id="simdi-simge" class="buyuk-simge" aria-hidden="true"></span>
+        <span id="simdi-derece" class="buyuk-derece"></span>
+      </div>
+      <p id="simdi-aciklama" class="aciklama"></p>
+      <dl class="detaylar">
+        <div><dt>Hissedilen</dt><dd id="d-hissedilen"></dd></div>
+        <div><dt>Nem</dt><dd id="d-nem"></dd></div>
+        <div><dt>Rüzgâr</dt><dd id="d-ruzgar"></dd></div>
+      </dl>
+      <p id="guncelleme" class="kucuk"></p>
+    </section>
+
+    <section id="gunler-bolumu" class="kart" aria-labelledby="gunler-baslik" hidden>
+      <h2 id="gunler-baslik">7 Günlük Tahmin</h2>
+      <ul id="gunler" class="gunler"></ul>
+    </section>
+  </main>
+
+  <footer class="alt">
+    <p>Veri: <a href="https://open-meteo.com/" rel="noopener">Open-Meteo.com</a> (CC BY 4.0)</p>
+  </footer>
+
+  <script type="module" src="js/uygulama.js"></script>
+</body>
+</html>

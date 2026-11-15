@@ -1,0 +1,11 @@
+﻿{
+  "name": "hava-panosu",
+  "version": "1.0.0",
+  "description": "Mobil uyumlu hava durumu panosu (PWA) - Open-Meteo",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "baslat": "python -m http.server 8080"
+  }
+}
